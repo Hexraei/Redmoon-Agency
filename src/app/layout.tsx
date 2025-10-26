@@ -1,3 +1,4 @@
+import '../globals.css'
 import { TRPCProvider } from '@/providers/trpc-provider'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
