@@ -63,7 +63,7 @@ export default function ProductDetailPage({
             <div>
               <h3 className="font-medium mb-2">Categories</h3>
               <div className="flex gap-2 flex-wrap">
-                {product.categories.map((cat) => (
+                {product.categories.map((cat: string) => (
                   <Badge key={cat}>{cat}</Badge>
                 ))}
               </div>
