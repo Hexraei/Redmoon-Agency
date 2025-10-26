@@ -1,21 +1,11 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { trpc } from '@/utils/trpc'
+import { TRPCProvider } from '@/providers/trpc-provider'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'REDMOON Agency',
-  description: 'Influencer-Brand Collaboration Platform',
-}
-
-function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <TRPCProvider>{children}</TRPCProvider>
+      </body>
     </html>
   )
 }
-
-export default trpc.withTRPC(RootLayout)
