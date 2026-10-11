@@ -43,7 +43,7 @@ export default async function DashboardLayout({
                 </Link>
                 {profile?.role === 'brand' && (
                   <Link
-                    href="/dashboard/products"
+                    href="/products"
                     className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
                   >
                     Products
@@ -51,7 +51,7 @@ export default async function DashboardLayout({
                 )}
                 {profile?.role === 'influencer' && (
                   <Link
-                    href="/dashboard/proposals"
+                    href="/proposals"
                     className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
                   >
                     Proposals
@@ -59,14 +59,14 @@ export default async function DashboardLayout({
                 )}
                 {profile?.role === 'agency' && (
                   <Link
-                    href="/dashboard/admin"
+                    href="/admin"
                     className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
                   >
                     Admin
                   </Link>
                 )}
                 <Link
-                  href="/dashboard/profile"
+                  href="/profile"
                   className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
                 >
                   Profile

@@ -8,14 +8,14 @@ test.describe('Proposal Flow', () => {
   })
 
   test('should submit a proposal', async ({ page }) => {
-    await page.goto('/dashboard/products')
+    await page.goto('/products')
 
     // Click on first product
     await page.click('.cursor-pointer')
 
     // Fill proposal form
     await page.fill('textarea', 'I would love to collaborate on this project')
-    await page.fill('input[label="Proposed Rate ($)"]', '300')
+    await page.getByLabel('Proposed Rate ($)').fill('300')
 
     await page.click('button[type="submit"]')
 

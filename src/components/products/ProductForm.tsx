@@ -19,7 +19,7 @@ export function ProductForm() {
 
   const createProduct = trpc.products.create.useMutation({
     onSuccess: (data) => {
-      router.push(`/dashboard/products/${data.id}`)
+      router.push(`/products/${data.id}`)
     },
   })
 

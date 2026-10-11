@@ -20,7 +20,7 @@ export function ProposalForm({ productId }: ProposalFormProps) {
 
   const createProposal = trpc.proposals.create.useMutation({
     onSuccess: () => {
-      router.push('/dashboard/proposals')
+      router.push('/proposals')
     },
   })
 

@@ -19,8 +19,8 @@ test.describe('Chat Flow', () => {
 
     // Navigate to same conversation
     const conversationId = 'test-conversation-id'
-    await page1.goto(`/dashboard/chat/${conversationId}`)
-    await page2.goto(`/dashboard/chat/${conversationId}`)
+    await page1.goto(`/chat/${conversationId}`)
+    await page2.goto(`/chat/${conversationId}`)
 
     // User 1 sends message
     await page1.fill('input[placeholder="Type a message..."]', 'Hello from user 1')

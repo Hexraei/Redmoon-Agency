@@ -16,14 +16,14 @@ interface ProductCardProps {
     status: string
     brand?: {
       full_name: string
-      company_name?: string
-    }
+      company_name?: string | null
+    } | null
   }
 }
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <Link href={`/dashboard/products/${product.id}`}>
+    <Link href={`/products/${product.id}`}>
       <Card className="hover:shadow-md transition-shadow cursor-pointer">
         <CardHeader>
           <div className="flex items-start justify-between">

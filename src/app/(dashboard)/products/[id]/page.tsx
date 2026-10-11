@@ -1,6 +1,5 @@
 'use client'
 
-import { use } from 'react'
 import { trpc } from '@/utils/trpc'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
@@ -10,9 +9,9 @@ import { ProposalForm } from '@/components/proposals/ProposalForm'
 export default function ProductDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }) {
-  const { id } = use(params)
+  const { id } = params
   const { data: product, isLoading } = trpc.products.getById.useQuery({
     productId: id,
   })

@@ -113,7 +113,7 @@ export function ChatWindow({ conversationId }: ChatWindowProps) {
       <CardHeader className="border-b">
         <div className="flex items-center justify-between">
           <CardTitle>
-            {conversation?.product.title || 'Conversation'}
+            {conversation?.product?.title || 'Conversation'}
           </CardTitle>
           <PresenceIndicator activeUsers={activeUsers} />
         </div>

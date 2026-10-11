@@ -19,7 +19,7 @@ export function ProductList() {
     <div>
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">Products</h2>
-        <Link href="/dashboard/products/new">
+        <Link href="/products/new">
           <Button>Create Product</Button>
         </Link>
       </div>

@@ -13,11 +13,11 @@ interface ProposalCardProps {
     created_at: string
     product?: {
       title: string
-    }
+    } | null
     influencer?: {
       full_name: string
-      follower_count?: number
-    }
+      follower_count?: number | null
+    } | null
   }
 }
 
